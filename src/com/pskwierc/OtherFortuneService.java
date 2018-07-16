@@ -1,5 +1,8 @@
 package com.pskwierc;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class OtherFortuneService implements FortuneService {
 
     @Override

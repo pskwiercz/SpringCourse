@@ -1,6 +1,7 @@
 package com.pskwierc;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("tCoach")
@@ -10,6 +11,8 @@ public class TennisCoach implements Coach {
     @Autowired
     private TennisPrice price;
 
+    @Autowired
+    @Qualifier("otherFortuneService")
     private FortuneService fortuneService;
 
     @Override
@@ -19,12 +22,6 @@ public class TennisCoach implements Coach {
 
     public FortuneService getFortuneService() {
         return fortuneService;
-    }
-
-    // Autowired - setter injection
-    @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
     }
 
     public TennisPrice getPrice() {

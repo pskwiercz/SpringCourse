@@ -1,18 +1,15 @@
 package com.pskwierc;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BikeCoach implements Coach {
 
-    private FortuneService fortuneService;
-
-    // Autowired - constructor injection
     @Autowired
-    public BikeCoach(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
+    @Qualifier("happyFortuneService")
+    private FortuneService fortuneService;
 
     @Override
     public String getDailyWorkout() {
