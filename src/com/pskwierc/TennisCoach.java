@@ -6,6 +6,10 @@ import org.springframework.stereotype.Component;
 @Component("tCoach")
 public class TennisCoach implements Coach {
 
+    // Autowired - field injection
+    @Autowired
+    private TennisPrice price;
+
     private FortuneService fortuneService;
 
     @Override
@@ -20,7 +24,10 @@ public class TennisCoach implements Coach {
     // Autowired - setter injection
     @Autowired
     public void setFortuneService(FortuneService fortuneService) {
-        System.out.println(">>> TennisCoach: inside setFortune Service");
         this.fortuneService = fortuneService;
+    }
+
+    public TennisPrice getPrice() {
+        return price;
     }
 }
