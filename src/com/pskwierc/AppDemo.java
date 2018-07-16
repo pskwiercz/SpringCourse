@@ -9,12 +9,14 @@ public class AppDemo {
         ClassPathXmlApplicationContext contect =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach theCoach = contect.getBean("tCoach", Coach.class);
+        TennisCoach tennisCoach = contect.getBean("tCoach", TennisCoach.class);
         BikeCoach bikeCoach = contect.getBean("bikeCoach", BikeCoach.class);
 
-        System.out.println(theCoach.getDailyWorkout());
+        System.out.println(tennisCoach.getDailyWorkout());
+        System.out.println(tennisCoach.getFortuneService().getFortune());
         System.out.println(bikeCoach.getDailyWorkout());
         System.out.println(bikeCoach.getFortuneService().getFortune());
+
         contect.close();
 
     }
