@@ -11,9 +11,13 @@ public class TennisCoach implements Coach {
     @Autowired
     private TennisPrice price;
 
+    private final FortuneService fortuneService;
+
+    // Qualifier - constructor injection
     @Autowired
-    @Qualifier("otherFortuneService")
-    private FortuneService fortuneService;
+    public TennisCoach(@Qualifier("otherFortuneService") FortuneService fortuneService){
+        this.fortuneService = fortuneService;
+    }
 
     @Override
     public String getDailyWorkout() {
