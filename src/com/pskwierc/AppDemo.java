@@ -16,6 +16,8 @@ public class AppDemo {
         System.out.println(tennisCoach.getFortuneService().getFortune());
         System.out.println(tennisCoach.getPrice().getWorkoutPrice());
 
+
+        System.out.println(bikeCoach.getTeam());
         System.out.println(bikeCoach.getDailyWorkout());
         System.out.println(bikeCoach.getFortuneService().getFortune());
 
