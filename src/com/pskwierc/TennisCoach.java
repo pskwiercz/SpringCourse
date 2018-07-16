@@ -2,7 +2,7 @@ package com.pskwierc;
 
 import org.springframework.stereotype.Component;
 
-@Component("tennisCoach")
+@Component("tCoach")
 public class TennisCoach implements Coach {
 
     @Override
