@@ -32,8 +32,9 @@ public class BikeCoach implements Coach {
         System.out.println(">>>>>> Pre Destroy");
     }
 
-    public FortuneService getFortuneService() {
-        return fortuneService;
+    @Override
+    public String getFortune() {
+        return fortuneService.getFortune();
     }
 
 }

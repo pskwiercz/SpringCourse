@@ -18,8 +18,9 @@ public class SwimmCoach implements Coach {
         return "Let's swimm";
     }
 
-    public FortuneService getFortuneService() {
-        return fortuneService;
+    @Override
+    public String getFortune() {
+        return fortuneService.getFortune();
     }
 
     public String getTeam() {

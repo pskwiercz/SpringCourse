@@ -2,19 +2,17 @@ package com.pskwierc;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class JavaConfigDemo {
+public class JavaConfigGolfDemo {
 
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(SportConfig.class);
+                new AnnotationConfigApplicationContext(GolfConfig.class);
 
-//        BikeCoach theCoach = context.getBean("bikeCoach", BikeCoach.class);
-        SwimmCoach theCoach = context.getBean("swimmCoach", SwimmCoach.class);
+        Coach theCoach = context.getBean("golfCoach", Coach.class);
 
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getFortune());
-        System.out.println(theCoach.getTeam());
 
         context.close();
     }
