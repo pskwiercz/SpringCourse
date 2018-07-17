@@ -14,6 +14,7 @@ public class JavaConfigDemo {
 
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach.getFortuneService().getFortune());
+        System.out.println(theCoach.getTeam());
 
         context.close();
     }

@@ -1,8 +1,13 @@
 package com.pskwierc;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimmCoach implements Coach {
 
     private FortuneService fortuneService;
+
+    @Value("${foo.team}")
+    private String team;
 
     public SwimmCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
@@ -15,5 +20,9 @@ public class SwimmCoach implements Coach {
 
     public FortuneService getFortuneService() {
         return fortuneService;
+    }
+
+    public String getTeam() {
+        return team;
     }
 }
