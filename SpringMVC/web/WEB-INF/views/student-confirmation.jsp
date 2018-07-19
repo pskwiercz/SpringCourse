@@ -13,7 +13,8 @@
 <body>
 
     <h1>
-        Hi ${student.firstName} ${student.lastName} !
+        Hi ${student.firstName} ${student.lastName} from ${student.country}!
     </h1>
+
 </body>
 </html>
