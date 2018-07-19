@@ -1,12 +1,21 @@
 package com.pskwierc.formTags;
 
+import java.util.LinkedHashMap;
+
 public class Student {
 
     private String firstName;
     private String lastName;
     private String country;
+    private LinkedHashMap<String, String> countries;
 
-    public Student() {}
+    public Student() {
+        countries = new LinkedHashMap<>();
+
+        countries.put("BRA", "Brasil");
+        countries.put("GER", "German");
+        countries.put("POL", "Poland");
+    }
 
     public String getFirstName() {
         return firstName;
@@ -30,5 +39,9 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public LinkedHashMap<String, String> getCountries() {
+        return countries;
     }
 }

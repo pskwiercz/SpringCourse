@@ -22,8 +22,10 @@
 
         <br><br>
         <form:select path="country">
-            <form:option value="Brasil" label="Brasil"/>
-            <form:option value="Poland" label="Poland"/>
+            <%--<form:option value="Brasil" label="Brasil"/>--%>
+            <%--<form:option value="Poland" label="Poland"/>--%>
+
+            <form:options items="${student.countries}"/>
 
         </form:select>
 
